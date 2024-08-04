@@ -2743,7 +2743,6 @@ syn keyword cmakeKWcmake_language contained
             \ DIRECTORY
             \ EVAL
             \ FALSE
-            \ FETCHCONTENT_MAKEAVAILABE_SERIAL
             \ FETCHCONTENT_MAKEAVAILABLE_SERIAL
             \ FETCHCONTENT_SOURCE_DIR_
             \ FETCHCONTENT_TRY_FIND_PACKAGE_MODE

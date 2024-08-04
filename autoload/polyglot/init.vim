@@ -1815,7 +1815,7 @@ endif
 
 if !has_key(g:polyglot_is_disabled, 'zig')
   au BufNewFile,BufRead *.zir setf zir
-  au BufNewFile,BufRead *.zig,*.zir setf zig
+  au BufNewFile,BufRead *.zig,*.zig.zon,*.zir setf zig
 endif
 
 if !has_key(g:polyglot_is_disabled, 'zephir')
@@ -1899,7 +1899,7 @@ if !has_key(g:polyglot_is_disabled, 'tptp')
 endif
 
 if !has_key(g:polyglot_is_disabled, 'toml')
-  au BufNewFile,BufRead *.toml,*/.cargo/config,*/.cargo/credentials,Cargo.lock,Gopkg.lock,Pipfile,pdm.lock,poetry.lock setf toml
+  au BufNewFile,BufRead *.toml,*/.cargo/config,*/.cargo/credentials,Cargo.lock,Cargo.toml.orig,Gopkg.lock,Pipfile,pdm.lock,poetry.lock setf toml
 endif
 
 if !has_key(g:polyglot_is_disabled, 'tmux')
@@ -1965,7 +1965,7 @@ if !has_key(g:polyglot_is_disabled, 'slim')
 endif
 
 if !has_key(g:polyglot_is_disabled, 'sh')
-  au BufNewFile,BufRead *.bash,*.bats,*.cgi,*.command,*.fcgi,*.ksh,*.sh,*.sh.in,*.tmux,*.tool,*.trigger,*.zsh-theme,*/etc/udev/cdsymlinks.conf,{.,}bash_aliases,{.,}bash_functions,{.,}bash_history,{.,}bash_logout,{.,}bash_profile,{.,}bashrc,{.,}cshrc,{.,}flaskenv,{.,}kshrc,{.,}login,{.,}profile,9fs,PKGBUILD,bash_aliases,bash_logout,bash_profile,bashrc,cshrc,gradlew,kshrc,login,man,profile setf sh
+  au BufNewFile,BufRead *.bash,*.bats,*.cgi,*.command,*.fcgi,*.ksh,*.sh,*.sh.in,*.tmux,*.tool,*.trigger,*.zsh-theme,*/etc/udev/cdsymlinks.conf,{.,}bash_aliases,{.,}bash_functions,{.,}bash_history,{.,}bash_logout,{.,}bash_profile,{.,}bashrc,{.,}cshrc,{.,}envrc,{.,}flaskenv,{.,}kshrc,{.,}login,{.,}profile,{.,}tmux.conf,9fs,PKGBUILD,bash_aliases,bash_logout,bash_profile,bashrc,cshrc,gradlew,kshrc,login,man,profile,tmux.conf setf sh
   au BufNewFile,BufRead *.zsh,*/etc/zprofile,{.,}zfbfmarks,{.,}zlogin,{.,}zlogout,{.,}zprofile,{.,}zshenv,{.,}zshrc setf zsh
   au BufNewFile,BufRead .zsh* call s:StarSetf('zsh')
   au BufNewFile,BufRead .zlog* call s:StarSetf('zsh')
@@ -2242,7 +2242,7 @@ if !has_key(g:polyglot_is_disabled, 'jsonnet')
 endif
 
 if !has_key(g:polyglot_is_disabled, 'json')
-  au BufNewFile,BufRead *.4DForm,*.4DProject,*.JSON-tmLanguage,*.avsc,*.geojson,*.gltf,*.har,*.ice,*.json,*.jsonl,*.jsonp,*.mcmeta,*.template,*.tfstate,*.tfstate.backup,*.topojson,*.webapp,*.webmanifest,*.yy,*.yyp,{.,}all-contributorsrc,{.,}arcconfig,{.,}auto-changelog,{.,}c8rc,{.,}htmlhintrc,{.,}imgbotconfig,{.,}nycrc,{.,}tern-config,{.,}tern-project,{.,}watchmanconfig,Pipfile.lock,composer.lock,flake.lock,mcmod.info setf json
+  au BufNewFile,BufRead *.4DForm,*.4DProject,*.JSON-tmLanguage,*.avsc,*.geojson,*.gltf,*.har,*.ice,*.json,*.jsonl,*.jsonp,*.mcmeta,*.sarif,*.template,*.tfstate,*.tfstate.backup,*.topojson,*.webapp,*.webmanifest,*.yy,*.yyp,{.,}all-contributorsrc,{.,}arcconfig,{.,}auto-changelog,{.,}c8rc,{.,}htmlhintrc,{.,}imgbotconfig,{.,}nycrc,{.,}tern-config,{.,}tern-project,{.,}watchmanconfig,MODULE.bazel.lock,Pipfile.lock,composer.lock,deno.lock,flake.lock,mcmod.info setf json
 endif
 
 if !has_key(g:polyglot_is_disabled, 'json5')
@@ -2588,7 +2588,7 @@ if !has_key(g:polyglot_is_disabled, 'ant')
 endif
 
 if !has_key(g:polyglot_is_disabled, 'xml')
-  au BufNewFile,BufRead *.adml,*.admx,*.ant,*.axaml,*.axml,*.builds,*.ccproj,*.ccxml,*.cdxml,*.clixml,*.cproject,*.cscfg,*.csdef,*.csl,*.csproj,*.csproj.user,*.ct,*.depproj,*.dita,*.ditamap,*.ditaval,*.dll.config,*.dotsettings,*.filters,*.fsproj,*.fxml,*.glade,*.gml,*.gmx,*.grxml,*.gst,*.hzp,*.iml,*.ivy,*.jelly,*.jsproj,*.kml,*.launch,*.mdpolicy,*.mjml,*.mod,*.mxml,*.natvis,*.ncl,*.ndproj,*.nproj,*.nuspec,*.odd,*.osm,*.pkgproj,*.pluginspec,*.proj,*.props,*.psc1,*.pt,*.qhelp,*.rdf,*.res,*.resx,*.rss,*.sch,*.scxml,*.sfproj,*.shproj,*.srdf,*.storyboard,*.sublime-snippet,*.sw,*.targets,*.tml,*.tpm,*.typ,*.ui,*.urdf,*.ux,*.vbproj,*.vcxproj,*.vsixmanifest,*.vssettings,*.vstemplate,*.vxml,*.wixproj,*.workflow,*.wpl,*.wsdl,*.wsf,*.wxi,*.wxl,*.wxs,*.x3d,*.xacro,*.xaml,*.xib,*.xlf,*.xliff,*.xmi,*.xml,*.xml.dist,*.xmp,*.xproj,*.xsd,*.xspec,*.xul,*.zcml,*/etc/blkid.tab,*/etc/blkid.tab.old,*/etc/xdg/menus/*.menu,*fglrxrc,{.,}classpath,{.,}cproject,{.,}project,App.config,NuGet.config,Settings.StyleCop,Web.Debug.config,Web.Release.config,Web.config,packages.config setf xml
+  au BufNewFile,BufRead *.adml,*.admx,*.ant,*.axaml,*.axml,*.builds,*.ccproj,*.ccxml,*.cdxml,*.clixml,*.cproject,*.cscfg,*.csdef,*.csl,*.csproj,*.csproj.user,*.ct,*.depproj,*.dita,*.ditamap,*.ditaval,*.dll.config,*.dotsettings,*.filters,*.fsproj,*.fxml,*.glade,*.gml,*.gmx,*.grxml,*.gst,*.hzp,*.iml,*.ivy,*.jelly,*.jsproj,*.kml,*.launch,*.mdpolicy,*.mjml,*.mod,*.mojo,*.mxml,*.natvis,*.ncl,*.ndproj,*.nproj,*.nuspec,*.odd,*.osm,*.pkgproj,*.pluginspec,*.proj,*.props,*.psc1,*.pt,*.qhelp,*.rdf,*.res,*.resx,*.rss,*.sch,*.scxml,*.sfproj,*.shproj,*.srdf,*.storyboard,*.sublime-snippet,*.sw,*.targets,*.tml,*.tpm,*.typ,*.ui,*.urdf,*.ux,*.vbproj,*.vcxproj,*.vsixmanifest,*.vssettings,*.vstemplate,*.vxml,*.wixproj,*.workflow,*.wpl,*.wsdl,*.wsf,*.wxi,*.wxl,*.wxs,*.x3d,*.xacro,*.xaml,*.xib,*.xlf,*.xliff,*.xmi,*.xml,*.xml.dist,*.xmp,*.xproj,*.xsd,*.xspec,*.xul,*.zcml,*/etc/blkid.tab,*/etc/blkid.tab.old,*/etc/xdg/menus/*.menu,*fglrxrc,{.,}classpath,{.,}cproject,{.,}project,App.config,NuGet.config,Settings.StyleCop,Web.Debug.config,Web.Release.config,Web.config,packages.config setf xml
 endif
 
 if !has_key(g:polyglot_is_disabled, 'csv')

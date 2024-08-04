@@ -548,7 +548,7 @@ filetypes:
 - name: emblem
   extensions:
   - emblem
-  - em 
+  - em
 ---
 name: erlang
 remote: vim-erlang/vim-erlang-runtime
@@ -868,7 +868,7 @@ globs:
 - '**/htmldjango.vim'
 filetypes:
 - name: htmldjango
-  linguist: Jinja 
+  linguist: Jinja
   ignore_warnings:
   # handled by mustache plugin
   - mustache
@@ -1927,7 +1927,7 @@ filetypes:
   - t
 ---
 name: gitignore
-remote: SirJson/fzf-gitignore 
+remote: SirJson/fzf-gitignore
 filetypes:
 - name: gitignore
   filenames:
@@ -1937,7 +1937,7 @@ filetypes:
 ---
 name: sql
 native: true
-glob: 
+glob:
 - '**/sql.vim'
 - '**/sqloracle.vim'
 filetypes:
@@ -2688,7 +2688,7 @@ filetypes:
   - pattern: exports
     description: Exports
 ---
-# TODO: change after merge: 
+# TODO: change after merge:
 name: falcon
 native: true
 glob: "**/falcon.vim"
@@ -5471,7 +5471,7 @@ filetypes:
     description: 'JSON with comments (https://komkom.github.io/)'
 ---
 name: gleam
-remote: gleam-lang/gleam.vim
+remote: gleam-lang/gleam.vim@main
 filetypes:
   - name: gleam
     extensions:

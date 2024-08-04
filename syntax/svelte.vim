@@ -81,9 +81,6 @@ endfunction
 " syntax. It defines group htmlJavaScript and htmlCss.
 call s:LoadSyntax('@HTMLSyntax', 'html')
 
-" Load svelte-html syntax
-syntax include syntax/svelte-html.vim
-
 " Avoid overload
 if !hlexists('cssTagName')
   call s:LoadSyntax('@htmlCss', 'css')
@@ -127,6 +124,14 @@ endif
 if s:use_typescript
   call s:LoadFullSyntax('@TypeScript', 'typescript')
 endif
+"}}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Load Svelte specific html syntax {{{
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax include syntax/svelte-html.vim
 "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
