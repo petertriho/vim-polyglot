@@ -6,9 +6,12 @@ if exists("b:current_syntax")
   finish
 endif
 
+syntax keyword odinAsm asm
+syntax keyword odinContext context
 syntax keyword odinUsing using
 syntax keyword odinTransmute transmute
 syntax keyword odinCast cast
+syntax keyword odinAutoCast auto_cast
 syntax keyword odinDistinct distinct
 syntax keyword odinOpaque opaque
 syntax keyword odinWhere where
@@ -28,6 +31,7 @@ syntax keyword odinSwitch switch
 syntax keyword odinCase case
 syntax keyword odinContinue continue
 syntax keyword odinBreak break
+syntax keyword odinFallthrough fallthrough
 syntax keyword odinSizeOf size_of
 syntax keyword odinOffsetOf offset_of
 syntax keyword odinTypeInfoOf type_info_of
@@ -37,6 +41,8 @@ syntax keyword odinAlignOf align_of
 
 syntax keyword odinOrReturn or_return
 syntax keyword odinOrElse or_else
+syntax keyword odinOrBreak or_break
+syntax keyword odinOrContinue or_continue
 
 syntax keyword odinInline inline
 syntax keyword odinNoInline no_inline
@@ -103,9 +109,12 @@ syntax match odinCommentNote "@\<\w\+\>" contained display
 syntax region odinLineComment start=/\/\// end=/$/  contains=odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack
 syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockComment, odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack
 
+highlight link odinAsm Keyword
+highlight link odinContext Keyword
 highlight link odinUsing Keyword
 highlight link odinTransmute Keyword
 highlight link odinCast Keyword
+highlight link odinAutoCast Keyword
 highlight link odinDistinct Keyword
 highlight link odinOpaque Keyword
 highlight link odinReturn Keyword
@@ -116,6 +125,7 @@ highlight link odinIn Keyword
 highlight link odinNotIn Keyword
 highlight link odinContinue Keyword
 highlight link odinBreak Keyword
+highlight link odinFallthrough Keyword
 highlight link odinSizeOf Keyword
 highlight link odinOffsetOf Keyword
 highlight link odinTypeOf Keyword
@@ -125,6 +135,8 @@ highlight link odinAlignOf Keyword
 highlight link odinPackage Keyword
 highlight link odinOrReturn Keyword
 highlight link odinOrElse Keyword
+highlight link odinOrBreak Keyword
+highlight link odinOrContinue Keyword
 highlight link odinWhere Keyword
 
 highlight link odinInline Keyword

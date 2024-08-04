@@ -536,6 +536,7 @@ let s:interpreters = {
   \ 'z3': 'smt2',
   \ 'deno': 'typescript',
   \ 'ts-node': 'typescript',
+  \ 'tsx': 'typescript',
   \ 'zsh': 'zsh',
   \ }
 " DO NOT EDIT CODE ABOVE, IT IS GENERATED WITH MAKEFILE

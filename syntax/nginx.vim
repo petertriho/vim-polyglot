@@ -5,7 +5,7 @@ endif
 " Vim syntax file
 " Language: nginx.conf
 " Maintainer: Chris Aumann <me@chr4.org>
-" Last Change: Jan 25, 2023
+" Last Change: Nov 25, 2023
 
 if exists("b:current_syntax")
   finish
@@ -264,6 +264,7 @@ syn keyword ngxDirective hls_forward_args
 syn keyword ngxDirective hls_fragment
 syn keyword ngxDirective hls_mp4_buffer_size
 syn keyword ngxDirective hls_mp4_max_buffer_size
+syn keyword ngxDirective http2
 syn keyword ngxDirective http2_chunk_size
 syn keyword ngxDirective http2_body_preread_size
 syn keyword ngxDirective http2_idle_timeout
@@ -275,6 +276,7 @@ syn keyword ngxDirective http2_push
 syn keyword ngxDirective http2_push_preload
 syn keyword ngxDirective http2_recv_buffer_size
 syn keyword ngxDirective http2_recv_timeout
+syn keyword ngxDirective http3
 syn keyword ngxDirective http3_hq
 syn keyword ngxDirective http3_max_concurrent_pushes
 syn keyword ngxDirective http3_max_concurrent_streams
